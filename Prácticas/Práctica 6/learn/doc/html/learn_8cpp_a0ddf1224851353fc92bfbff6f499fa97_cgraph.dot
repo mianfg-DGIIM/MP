@@ -1,0 +1,35 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pinta_mensaje",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$learn_8cpp.html#aca71cd1853cff48e90f3f1ab3c6f8b67",tooltip="Imprime mensaje de ayuda. "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Idioma::cargarDeFichero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdioma.html#ab012e232b14198714f83372f43bf1eae",tooltip="Recupera una serialización de un idioma desde un fichero y reconstruye el idioma. ..."];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Idioma::setIdioma",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdioma.html#ade18af885e0762821718876f7de496df",tooltip="Establece el ID del idioma. "];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Idioma::ordenar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdioma.html#aa6de3b18f24c765ca94f2e84a6498d66",tooltip="Ordena la lista de bigramas de mayor a menor frecuencia. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ordenaDescFrec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Bigrama_8h.html#a053c03083c19b0549f9ccd8d9b1b9175",tooltip="Ordena un vector de bigramas de forma descendente por frecuencias. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Idioma_8h.html#a0b5cc80627118f2e81ba4a598b049038",tooltip="Serialización de un idioma para su inserción en un flujo de salida. "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Bigrama::getBigrama",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#adb616b62beeaa4fb9303cd647ea3fba3",tooltip="Devuelve el bigrama almacenado. "];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Bigrama::getFrecuencia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#a5a7f1ec845ac5971c8d788c12171a9c9",tooltip="Devuelve la frecuencia almacenada. "];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="operator\>\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Idioma_8h.html#a53c4ac4ea31b0632bf37c03d8f0fb286",tooltip="Reconstruye un Idioma a partir de una serialización. "];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Bigrama::setBigrama",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#ad9f512b7f00068f100f2fdfb5de32746",tooltip="Actualiza el bigrama, siempre que sea de la longitud adecuada, en otro caso, no se actualiza..."];
+  Node4 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Bigrama::setFrecuencia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#a63dd808514f1eaf233f49cbbe3c2af82",tooltip="Actualiza la frecuencia almacenada. "];
+  Node4 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Idioma::addBigrama",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdioma.html#af43adb93961472c23da23d841c198c1a",tooltip="Añade un nuevo bigrama a la lista. Si el bigrama se añade por primera vez se debe incrementar el tama..."];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Idioma::salvarAFichero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIdioma.html#af49108ec99fd517ed7252158859c1b96",tooltip="Serializa y guarda un idioma en un fichero. "];
+}

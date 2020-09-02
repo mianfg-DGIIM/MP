@@ -1,0 +1,527 @@
+\hypertarget{classIdioma}{}\section{Referencia de la Clase Idioma}
+\label{classIdioma}\index{Idioma@{Idioma}}
+
+
+Representa el conjunto los bigramas asociados a un idioma junto con el identificador del idioma.  
+
+
+
+
+{\ttfamily \#include $<$Idioma.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIdioma_a6722a621ce03825772493e67e5a17215}\label{classIdioma_a6722a621ce03825772493e67e5a17215}} 
+\hyperlink{classIdioma_a6722a621ce03825772493e67e5a17215}{Idioma} ()
+\begin{DoxyCompactList}\small\item\em Constructor base. \end{DoxyCompactList}\item 
+\hyperlink{classIdioma_aa6efbcb93b1c9138c22f5754da90d3c0}{Idioma} (int nbg)
+\begin{DoxyCompactList}\small\item\em Constructor para pre-\/reservar memoria. \end{DoxyCompactList}\item 
+\hyperlink{classIdioma_acddd7589175d95fc58101ca4fdbf3679}{Idioma} (const \hyperlink{classIdioma}{Idioma} \&orig)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIdioma_a80c90f8c9a7f824d7d7d171b9face201}\label{classIdioma_a80c90f8c9a7f824d7d7d171b9face201}} 
+\hyperlink{classIdioma_a80c90f8c9a7f824d7d7d171b9face201}{$\sim$\+Idioma} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classIdioma}{Idioma} \& \hyperlink{classIdioma_a0d073160913271ba93aa8c560a16d1c5}{operator=} (const \hyperlink{classIdioma}{Idioma} \&orig)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de asignación. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classIdioma_a7e00ccf37184dbe4247df7c093b4456d}{get\+Idioma} () const
+\begin{DoxyCompactList}\small\item\em Consulta el ID del idioma. \end{DoxyCompactList}\item 
+void \hyperlink{classIdioma_ade18af885e0762821718876f7de496df}{set\+Idioma} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Establece el ID del idioma. \end{DoxyCompactList}\item 
+\hyperlink{classBigrama}{Bigrama} \hyperlink{classIdioma_ae20fa510506967e26191fcb930fc210e}{get\+Posicion} (int p) const
+\begin{DoxyCompactList}\small\item\em Consulta la lista de bigramas. \end{DoxyCompactList}\item 
+void \hyperlink{classIdioma_ae645826d470547ecd8decc4a9498fb55}{set\+Posicion} (int p, const \hyperlink{classBigrama}{Bigrama} \&bg)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo bigrama. \end{DoxyCompactList}\item 
+int \hyperlink{classIdioma_a32dc7a4370ad2b5dff89ce331acac878}{get\+Size} () const
+\begin{DoxyCompactList}\small\item\em Consulta el número de bigramas existentes. \end{DoxyCompactList}\item 
+int \hyperlink{classIdioma_a111e1cdd3070e81782b6890e14391804}{find\+Bigrama} (const std\+::string \&bg) const
+\begin{DoxyCompactList}\small\item\em Busca un bigrama en la lista de bigramas. \end{DoxyCompactList}\item 
+void \hyperlink{classIdioma_a106ba8d7b9956a97243abc33a3ccea0b}{ampliar\+Memoria} (int n)
+\begin{DoxyCompactList}\small\item\em reserva memoria para {\itshape n} bigramas adicionales a los que ya haya reservados, manteniendo los datos que hubiese podido haber reservados \end{DoxyCompactList}\item 
+void \hyperlink{classIdioma_af43adb93961472c23da23d841c198c1a}{add\+Bigrama} (const \hyperlink{classBigrama}{Bigrama} \&bg)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo bigrama a la lista. Si el bigrama se añade por primera vez se debe incrementar el tamaño del vector para alojar el nuevo bigrama. Si el bigrama ya existe, se deben de sumar ambas frecuencias, la existente y la nueva. \end{DoxyCompactList}\item 
+double \hyperlink{classIdioma_a6c2901fbfd2f7ee7dead028dac45b44b}{distancia} (const \hyperlink{classIdioma}{Idioma} \&otro) const
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos idiomas. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIdioma_aa6de3b18f24c765ca94f2e84a6498d66}\label{classIdioma_aa6de3b18f24c765ca94f2e84a6498d66}} 
+void \hyperlink{classIdioma_aa6de3b18f24c765ca94f2e84a6498d66}{ordenar} ()
+\begin{DoxyCompactList}\small\item\em Ordena la lista de bigramas de mayor a menor frecuencia. \end{DoxyCompactList}\item 
+bool \hyperlink{classIdioma_af49108ec99fd517ed7252158859c1b96}{salvar\+A\+Fichero} (const char $\ast$fichero) const
+\begin{DoxyCompactList}\small\item\em Serializa y guarda un idioma en un fichero. \end{DoxyCompactList}\item 
+bool \hyperlink{classIdioma_ab012e232b14198714f83372f43bf1eae}{cargar\+De\+Fichero} (const char $\ast$fichero)
+\begin{DoxyCompactList}\small\item\em Recupera una serialización de un idioma desde un fichero y reconstruye el idioma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classIdioma_a0b5cc80627118f2e81ba4a598b049038}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classIdioma}{Idioma} \&i)
+\begin{DoxyCompactList}\small\item\em Serialización de un idioma para su inserción en un flujo de salida. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{classIdioma_ad6842fe05d68733701bf98f04b439e8a}{operator$>$$>$} (std\+::istream \&os, \hyperlink{classIdioma}{Idioma} \&i)
+\begin{DoxyCompactList}\small\item\em Reconstruye un \hyperlink{classIdioma}{Idioma} a partir de una serialización. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa el conjunto los bigramas asociados a un idioma junto con el identificador del idioma. 
+
+Definición en la línea 17 del archivo Idioma.\+h.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classIdioma_aa6efbcb93b1c9138c22f5754da90d3c0}\label{classIdioma_aa6efbcb93b1c9138c22f5754da90d3c0}} 
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{Idioma()}{Idioma()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Idioma\+::\+Idioma (\begin{DoxyParamCaption}\item[{int}]{nbg }\end{DoxyParamCaption})}
+
+
+
+Constructor para pre-\/reservar memoria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nbg} & Número de bigramas pre-\/reservados \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 19 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+19                       \{
+20     \_idioma = \textcolor{stringliteral}{"unknown"};
+21     \_nBigramas = nbg;
+22     \_conjunto = \textcolor{keyword}{new} \hyperlink{classBigrama}{Bigrama}[nbg];
+23 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_acddd7589175d95fc58101ca4fdbf3679}\label{classIdioma_acddd7589175d95fc58101ca4fdbf3679}} 
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{Idioma()}{Idioma()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Idioma\+::\+Idioma (\begin{DoxyParamCaption}\item[{const \hyperlink{classIdioma}{Idioma} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em orig} & El idioma que se quiere copiar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 25 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+25                                  \{
+26     copiar(orig);
+27 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classIdioma_af43adb93961472c23da23d841c198c1a}\label{classIdioma_af43adb93961472c23da23d841c198c1a}} 
+\index{Idioma@{Idioma}!add\+Bigrama@{add\+Bigrama}}
+\index{add\+Bigrama@{add\+Bigrama}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{add\+Bigrama()}{addBigrama()}}
+{\footnotesize\ttfamily void Idioma\+::add\+Bigrama (\begin{DoxyParamCaption}\item[{const \hyperlink{classBigrama}{Bigrama} \&}]{bg }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo bigrama a la lista. Si el bigrama se añade por primera vez se debe incrementar el tamaño del vector para alojar el nuevo bigrama. Si el bigrama ya existe, se deben de sumar ambas frecuencias, la existente y la nueva. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bg} & El bigrama a añadir \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 74 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+74                                           \{
+75     \textcolor{keywordtype}{int} loc = \hyperlink{classIdioma_a111e1cdd3070e81782b6890e14391804}{findBigrama}(bg.\hyperlink{classBigrama_adb616b62beeaa4fb9303cd647ea3fba3}{getBigrama}());
+76     \textcolor{keywordflow}{if} ( loc == -1 ) \{
+77         \hyperlink{classIdioma_a106ba8d7b9956a97243abc33a3ccea0b}{ampliarMemoria}(1);
+78         \_conjunto[\_nBigramas-1].\hyperlink{classBigrama_ad9f512b7f00068f100f2fdfb5de32746}{setBigrama}(bg.\hyperlink{classBigrama_adb616b62beeaa4fb9303cd647ea3fba3}{getBigrama}());
+79         \_conjunto[\_nBigramas-1].\hyperlink{classBigrama_a63dd808514f1eaf233f49cbbe3c2af82}{setFrecuencia}(bg.\hyperlink{classBigrama_a5a7f1ec845ac5971c8d788c12171a9c9}{getFrecuencia}());
+80     \} \textcolor{keywordflow}{else}
+81         \_conjunto[loc].\hyperlink{classBigrama_a63dd808514f1eaf233f49cbbe3c2af82}{setFrecuencia}(\_conjunto[loc].getFrecuencia() + bg.
+      \hyperlink{classBigrama_a5a7f1ec845ac5971c8d788c12171a9c9}{getFrecuencia}());
+82 \}
+\end{DoxyCode}
+Gráfico de llamadas para esta función\+:
+% FIG 0
+\mbox{\Hypertarget{classIdioma_a106ba8d7b9956a97243abc33a3ccea0b}\label{classIdioma_a106ba8d7b9956a97243abc33a3ccea0b}} 
+\index{Idioma@{Idioma}!ampliar\+Memoria@{ampliar\+Memoria}}
+\index{ampliar\+Memoria@{ampliar\+Memoria}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{ampliar\+Memoria()}{ampliarMemoria()}}
+{\footnotesize\ttfamily void Idioma\+::ampliar\+Memoria (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+reserva memoria para {\itshape n} bigramas adicionales a los que ya haya reservados, manteniendo los datos que hubiese podido haber reservados 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & número de bigramas a ampliar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 64 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+64                                  \{
+65     \textcolor{keywordtype}{int} new\_size = \_nBigramas+n;
+66     \hyperlink{classBigrama}{Bigrama}* new\_conjunto = \textcolor{keyword}{new} \hyperlink{classBigrama}{Bigrama}[new\_size];
+67     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \_nBigramas; i++ )
+68         new\_conjunto[i] = \_conjunto[i];
+69     liberarMemoria();
+70     \_nBigramas = new\_size;
+71     \_conjunto = new\_conjunto;
+72 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_ab012e232b14198714f83372f43bf1eae}\label{classIdioma_ab012e232b14198714f83372f43bf1eae}} 
+\index{Idioma@{Idioma}!cargar\+De\+Fichero@{cargar\+De\+Fichero}}
+\index{cargar\+De\+Fichero@{cargar\+De\+Fichero}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{cargar\+De\+Fichero()}{cargarDeFichero()}}
+{\footnotesize\ttfamily bool Idioma\+::cargar\+De\+Fichero (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fichero }\end{DoxyParamCaption})}
+
+
+
+Recupera una serialización de un idioma desde un fichero y reconstruye el idioma. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fichero} & Fichero que contiene un idioma serializado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\bfseries false} si ha habido algún tipo de error, {\bfseries true} en otro caso 
+\end{DoxyReturn}
+
+
+Definición en la línea 131 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+131                                                 \{
+132     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};
+133     ifstream fentrada;
+134     fentrada.open(fichero);
+135     \textcolor{keywordflow}{if} (fentrada)
+136         fentrada >> *\textcolor{keyword}{this};
+137     \textcolor{keywordflow}{else} \{
+138         status = \textcolor{keyword}{false};
+139         cerr << \textcolor{stringliteral}{"Error cargando datos de "} << fichero << endl;
+140     \}
+141     fentrada.close();
+142     \textcolor{keywordflow}{return} status;
+143 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_a6c2901fbfd2f7ee7dead028dac45b44b}\label{classIdioma_a6c2901fbfd2f7ee7dead028dac45b44b}} 
+\index{Idioma@{Idioma}!distancia@{distancia}}
+\index{distancia@{distancia}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{distancia()}{distancia()}}
+{\footnotesize\ttfamily double Idioma\+::distancia (\begin{DoxyParamCaption}\item[{const \hyperlink{classIdioma}{Idioma} \&}]{otro }\end{DoxyParamCaption}) const}
+
+
+
+Calcula la distancia entre dos idiomas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otro} & El segundo idioma para consultar la distancia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea 84 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+84                                                  \{
+85     
+86 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_a111e1cdd3070e81782b6890e14391804}\label{classIdioma_a111e1cdd3070e81782b6890e14391804}} 
+\index{Idioma@{Idioma}!find\+Bigrama@{find\+Bigrama}}
+\index{find\+Bigrama@{find\+Bigrama}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{find\+Bigrama()}{findBigrama()}}
+{\footnotesize\ttfamily int Idioma\+::find\+Bigrama (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bg }\end{DoxyParamCaption}) const}
+
+
+
+Busca un bigrama en la lista de bigramas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bg} & El bigrama que se está buscando \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+La posición que ocupa {\ttfamily bg} en la lista, -\/1 si no está en la lista 
+\end{DoxyReturn}
+
+
+Definición en la línea 57 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+57                                               \{
+58     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < \_nBigramas; i++ )
+59         \textcolor{keywordflow}{if} ( \_conjunto[i].getBigrama()[0] == bg[0] && \_conjunto[i].getBigrama()[1] == bg[1] )
+60             \textcolor{keywordflow}{return} i;
+61     \textcolor{keywordflow}{return} -1;
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_a7e00ccf37184dbe4247df7c093b4456d}\label{classIdioma_a7e00ccf37184dbe4247df7c093b4456d}} 
+\index{Idioma@{Idioma}!get\+Idioma@{get\+Idioma}}
+\index{get\+Idioma@{get\+Idioma}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{get\+Idioma()}{getIdioma()}}
+{\footnotesize\ttfamily std\+::string Idioma\+::get\+Idioma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consulta el ID del idioma. 
+
+\begin{DoxyReturn}{Devuelve}
+ID del idioma 
+\end{DoxyReturn}
+
+
+Definición en la línea 41 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+41                                   \{
+42     \textcolor{keywordflow}{return} \_idioma;
+43 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_ae20fa510506967e26191fcb930fc210e}\label{classIdioma_ae20fa510506967e26191fcb930fc210e}} 
+\index{Idioma@{Idioma}!get\+Posicion@{get\+Posicion}}
+\index{get\+Posicion@{get\+Posicion}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{get\+Posicion()}{getPosicion()}}
+{\footnotesize\ttfamily \hyperlink{classBigrama}{Bigrama} Idioma\+::get\+Posicion (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Consulta la lista de bigramas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & La posición de la lista que se quiere consultar  La posición {\ttfamily p} es correcta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El bigrama que ocupa la posición {\ttfamily p} 
+\end{DoxyReturn}
+
+
+Definición en la línea 49 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+49                                        \{
+50     \textcolor{keywordflow}{return} \_conjunto[p];
+51 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_a32dc7a4370ad2b5dff89ce331acac878}\label{classIdioma_a32dc7a4370ad2b5dff89ce331acac878}} 
+\index{Idioma@{Idioma}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily int Idioma\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta el número de bigramas existentes. 
+
+\begin{DoxyReturn}{Devuelve}
+El tamaño de la lista de bigramas 
+\end{DoxyReturn}
+
+
+Definición en la línea 80 del archivo Idioma.\+h.
+
+
+\begin{DoxyCode}
+80 \{ \textcolor{keywordflow}{return} \_nBigramas; \};
+\end{DoxyCode}
+Gráfico de llamadas para esta función\+:
+% FIG 1
+\mbox{\Hypertarget{classIdioma_a0d073160913271ba93aa8c560a16d1c5}\label{classIdioma_a0d073160913271ba93aa8c560a16d1c5}} 
+\index{Idioma@{Idioma}!operator=@{operator=}}
+\index{operator=@{operator=}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classIdioma}{Idioma} \& Idioma\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classIdioma}{Idioma} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de asignación. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em orig} & Parámetro rhs de la asignación \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+this para concatenación de asignaciones de derecha a izquierda 
+\end{DoxyReturn}
+
+
+Definición en la línea 36 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+36                                             \{
+37     copiar(orig);
+38     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+39 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_af49108ec99fd517ed7252158859c1b96}\label{classIdioma_af49108ec99fd517ed7252158859c1b96}} 
+\index{Idioma@{Idioma}!salvar\+A\+Fichero@{salvar\+A\+Fichero}}
+\index{salvar\+A\+Fichero@{salvar\+A\+Fichero}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{salvar\+A\+Fichero()}{salvarAFichero()}}
+{\footnotesize\ttfamily bool Idioma\+::salvar\+A\+Fichero (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fichero }\end{DoxyParamCaption}) const}
+
+
+
+Serializa y guarda un idioma en un fichero. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fichero} & El fichero de salida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\bfseries false} si ha habido algún tipo de error, {\bfseries true} en otro caso 
+\end{DoxyReturn}
+
+
+Definición en la línea 117 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+117                                                      \{
+118     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{true};
+119     ofstream fsalida;
+120     fsalida.open(fichero);
+121     \textcolor{keywordflow}{if} (fsalida)
+122         fsalida << *\textcolor{keyword}{this};
+123     \textcolor{keywordflow}{else} \{
+124         status = \textcolor{keyword}{false};
+125         cerr << \textcolor{stringliteral}{"Error guardando datos en "} << fichero << endl;
+126     \}
+127     fsalida.close();
+128     \textcolor{keywordflow}{return} status;
+129 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_ade18af885e0762821718876f7de496df}\label{classIdioma_ade18af885e0762821718876f7de496df}} 
+\index{Idioma@{Idioma}!set\+Idioma@{set\+Idioma}}
+\index{set\+Idioma@{set\+Idioma}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{set\+Idioma()}{setIdioma()}}
+{\footnotesize\ttfamily void Idioma\+::set\+Idioma (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Establece el ID del idioma. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Nuevo ID del idioma \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 45 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+45                                           \{
+46     \_idioma = id;
+47 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classIdioma_ae645826d470547ecd8decc4a9498fb55}\label{classIdioma_ae645826d470547ecd8decc4a9498fb55}} 
+\index{Idioma@{Idioma}!set\+Posicion@{set\+Posicion}}
+\index{set\+Posicion@{set\+Posicion}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{set\+Posicion()}{setPosicion()}}
+{\footnotesize\ttfamily void Idioma\+::set\+Posicion (\begin{DoxyParamCaption}\item[{int}]{p,  }\item[{const \hyperlink{classBigrama}{Bigrama} \&}]{bg }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo bigrama. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & La posición en la que se quiere insertar el bigrama  La posición {\ttfamily p} es correcta \\
+\hline
+{\em bg} & El bigrama a insertar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 53 del archivo Idioma.\+cpp.
+
+
+\begin{DoxyCode}
+53                                                   \{
+54     \_conjunto[p] = bg;
+55 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{classIdioma_a0b5cc80627118f2e81ba4a598b049038}\label{classIdioma_a0b5cc80627118f2e81ba4a598b049038}} 
+\index{Idioma@{Idioma}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classIdioma}{Idioma} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Serialización de un idioma para su inserción en un flujo de salida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & Flujo de salida \\
+\hline
+{\em i} & \hyperlink{classIdioma}{Idioma} a serializar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El mismo flujo de salida para inserciones consecutivas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIdioma_ad6842fe05d68733701bf98f04b439e8a}\label{classIdioma_ad6842fe05d68733701bf98f04b439e8a}} 
+\index{Idioma@{Idioma}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Idioma@{Idioma}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{os,  }\item[{\hyperlink{classIdioma}{Idioma} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Reconstruye un \hyperlink{classIdioma}{Idioma} a partir de una serialización. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & Flujo de entrada desde el que se extrae la serialización \\
+\hline
+{\em i} & \hyperlink{classIdioma}{Idioma} reconstruido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El mismo flujo de entrada para extracciones consecutivas 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Idioma_8h}{Idioma.\+h}\item 
+src/\hyperlink{Idioma_8cpp}{Idioma.\+cpp}\end{DoxyCompactItemize}

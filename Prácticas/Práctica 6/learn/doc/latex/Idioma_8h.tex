@@ -1,0 +1,69 @@
+\hypertarget{Idioma_8h}{}\section{Referencia del Archivo include/\+Idioma.h}
+\label{Idioma_8h}\index{include/\+Idioma.\+h@{include/\+Idioma.\+h}}
+{\ttfamily \#include \char`\"{}Bigrama.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Dependencia gráfica adjunta para Idioma.\+h\+:
+% FIG 0
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+% FIG 1
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIdioma}{Idioma}
+\begin{DoxyCompactList}\small\item\em Representa el conjunto los bigramas asociados a un idioma junto con el identificador del idioma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{Idioma_8h_a0b5cc80627118f2e81ba4a598b049038}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classIdioma}{Idioma} \&i)
+\begin{DoxyCompactList}\small\item\em Serialización de un idioma para su inserción en un flujo de salida. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{Idioma_8h_a53c4ac4ea31b0632bf37c03d8f0fb286}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classIdioma}{Idioma} \&i)
+\begin{DoxyCompactList}\small\item\em Reconstruye un \hyperlink{classIdioma}{Idioma} a partir de una serialización. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+Miguel Ángel Fernández Gutiérrez \href{mailto:mianfg@correo.ugr.es}{\tt mianfg@correo.\+ugr.\+es} 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{Idioma_8h_a0b5cc80627118f2e81ba4a598b049038}\label{Idioma_8h_a0b5cc80627118f2e81ba4a598b049038}} 
+\index{Idioma.\+h@{Idioma.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Idioma.\+h@{Idioma.\+h}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classIdioma}{Idioma} \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Serialización de un idioma para su inserción en un flujo de salida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & Flujo de salida \\
+\hline
+{\em i} & \hyperlink{classIdioma}{Idioma} a serializar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El mismo flujo de salida para inserciones consecutivas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Idioma_8h_a53c4ac4ea31b0632bf37c03d8f0fb286}\label{Idioma_8h_a53c4ac4ea31b0632bf37c03d8f0fb286}} 
+\index{Idioma.\+h@{Idioma.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Idioma.\+h@{Idioma.\+h}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\hyperlink{classIdioma}{Idioma} \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Reconstruye un \hyperlink{classIdioma}{Idioma} a partir de una serialización. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & Flujo de entrada desde el que se extrae la serialización \\
+\hline
+{\em i} & \hyperlink{classIdioma}{Idioma} reconstruido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El mismo flujo de entrada para extracciones consecutivas 
+\end{DoxyReturn}

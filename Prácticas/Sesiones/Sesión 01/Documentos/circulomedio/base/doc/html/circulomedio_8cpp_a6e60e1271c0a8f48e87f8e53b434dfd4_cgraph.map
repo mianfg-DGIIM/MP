@@ -1,0 +1,13 @@
+<map id="interior" name="interior">
+<area shape="rect" id="node2" href="$circulomedio_8cpp.html#a9c93fd6721d3b594dbbcfb77a92a2880" title="Clase Punto. " alt="" coords="141,31,216,57"/>
+<area shape="rect" id="node5" href="$classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b" title="Devuelve el centro de un circulo. " alt="" coords="115,132,243,159"/>
+<area shape="rect" id="node6" href="$classCirculo.html#a982f8a785d8a68ab1483b609cd752980" title="Devuelve el radio de un circulo. " alt="" coords="117,183,240,209"/>
+<area shape="rect" id="node7" href="$classCirculo.html#aa71efffb3b42eeaefd43743a8d34aa74" title="lee círculo en formato radio&#45;centro " alt="" coords="133,233,225,260"/>
+<area shape="rect" id="node8" href="$classCirculo.html#a2deaed49ea394702beb0554f9480137e" title="Escribe círculo en formato radio&#45;centro. " alt="" coords="122,284,235,311"/>
+<area shape="rect" id="node9" href="$classCirculo.html#aa24cc4b316a3d9ece35f120d9b8e1fc4" title="Asigna el centro y el radio a un circulo. " alt="" coords="134,335,223,361"/>
+<area shape="rect" id="node10" href="$circulomedio_8cpp.html#a119f914f219e98be4c2c93b5138e97da" title="Calcula el punto que está entre dos puntos dados con distancia mínima a ambos. " alt="" coords="134,81,223,108"/>
+<area shape="rect" id="node3" href="$classPunto.html#aa218292fec9bad5ec6d71d4bd9173d9d" title="Devuelve la coordenada x del punto. " alt="" coords="291,5,381,32"/>
+<area shape="rect" id="node4" href="$classPunto.html#a214978b8bbae48ca5927f2e56fb3bd22" title="Devuelve la coordenada y del punto. " alt="" coords="291,56,381,83"/>
+<area shape="rect" id="node11" href="$classPunto.html#a51ae6616f828bb2b4111bc8ace49dbca" title="Asigna el valor nuevoX a la coordenada x del punto. " alt="" coords="291,107,381,133"/>
+<area shape="rect" id="node12" href="$classPunto.html#a6a0f8adb5946f31a7867a06f54d97462" title="Asigna el valor nuevoY a la coordenada y del punto. " alt="" coords="291,157,381,184"/>
+</map>

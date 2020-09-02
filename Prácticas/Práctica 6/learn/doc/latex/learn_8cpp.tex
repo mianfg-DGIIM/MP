@@ -1,0 +1,124 @@
+\hypertarget{learn_8cpp}{}\section{Referencia del Archivo src/learn.cpp}
+\label{learn_8cpp}\index{src/learn.\+cpp@{src/learn.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Contador\+Bigramas.\+h\char`\"{}}\newline
+Dependencia gráfica adjunta para learn.\+cpp\+:
+% FIG 0
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{learn_8cpp_aca71cd1853cff48e90f3f1ab3c6f8b67}\label{learn_8cpp_aca71cd1853cff48e90f3f1ab3c6f8b67}} 
+void \hyperlink{learn_8cpp_aca71cd1853cff48e90f3f1ab3c6f8b67}{pinta\+\_\+mensaje} ()
+\begin{DoxyCompactList}\small\item\em Imprime mensaje de ayuda. \end{DoxyCompactList}\item 
+int \hyperlink{learn_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+Miguel Ángel Fernández Gutiérrez \href{mailto:mianfg@correo.ugr.es}{\tt mianfg@correo.\+ugr.\+es} 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{learn_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{learn_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{learn.\+cpp@{learn.\+cpp}!main@{main}}
+\index{main@{main}!learn.\+cpp@{learn.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Cadena de caracteres válidos de I\+S\+O8859-\/1 para múltiples idiomas
+
+análisis y comprobación de formato 
+
+Definición en la línea 29 del archivo learn.\+cpp.
+
+
+\begin{DoxyCode}
+29                                  \{
+31     \textcolor{keywordtype}{string} valid=\textcolor{stringliteral}{"abcdefghijklmnopqrstuvwxyz\(\backslash\)xE0\(\backslash\)xE1\(\backslash\)xE2\(\backslash\)xE3\(\backslash\)xE4\(\backslash\)xE5\(\backslash\)xE6\(\backslash\)xE7\(\backslash\)xE8\(\backslash\)xE9\(\backslash\)xEA\(\backslash\)xEB\(\backslash\)xEC\(\backslash\)xED\(\backslash\)xEE\(\backslash\)x
+      EF\(\backslash\)xF0\(\backslash\)xF1\(\backslash\)xF2\(\backslash\)xF3\(\backslash\)xF4\(\backslash\)xF5\(\backslash\)xF6\(\backslash\)xF8\(\backslash\)xF9\(\backslash\)xFA\(\backslash\)xFB\(\backslash\)xFC\(\backslash\)xFD\(\backslash\)xFE\(\backslash\)xFF"}; 
+32     
+33     \textcolor{keywordtype}{string} nombre\_idioma = \textcolor{stringliteral}{"unknown"};
+34     \textcolor{keywordtype}{string} fichero\_salida = \textcolor{stringliteral}{"out.bgr"};
+35     \textcolor{keywordtype}{int} start\_ficheros = 2;
+36     
+38     \textcolor{keywordtype}{bool} status = \textcolor{keyword}{false};
+39     \textcolor{keywordflow}{if} ( argc > 1 )
+40         \textcolor{keywordflow}{if} ( strcmp(argv[1], \textcolor{stringliteral}{"-c"}) == 0 || strcmp(argv[1], \textcolor{stringliteral}{"-a"}) == 0 )
+41             status = \textcolor{keyword}{true};
+42     \textcolor{keywordflow}{if} ( argc > 5 && status ) \{
+43         \textcolor{keywordflow}{if} ( strcmp(argv[2], \textcolor{stringliteral}{"-l"}) == 0 && strcmp(argv[4], \textcolor{stringliteral}{"-f"}) == 0 ) \{
+44             nombre\_idioma = argv[3];
+45             fichero\_salida = argv[5];
+46             start\_ficheros = 6;
+47         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( strcmp(argv[2], \textcolor{stringliteral}{"-f"}) == 0 && strcmp(argv[4], \textcolor{stringliteral}{"-l"}) == 0 ) \{
+48             fichero\_salida = argv[3];
+49             nombre\_idioma = argv[5];
+50             start\_ficheros = 6;
+51         \}
+52     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( argc > 3 && status ) \{
+53         \textcolor{keywordflow}{if} ( strcmp(argv[2], \textcolor{stringliteral}{"-l"}) == 0 ) \{
+54             nombre\_idioma = argv[3];
+55             start\_ficheros = 4;
+56         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( strcmp(argv[2], \textcolor{stringliteral}{"-f"}) == 0 ) \{
+57             fichero\_salida = argv[3];
+58             start\_ficheros = 4;
+59         \}
+60     \}
+61     
+62     cout << endl;
+63     
+64     \textcolor{keywordflow}{if} (argc <= start\_ficheros) status = \textcolor{keyword}{false};
+65     
+66     \textcolor{keywordflow}{if} ( !status ) \{
+67         cerr << \textcolor{stringliteral}{"Formato de request inválido"} << endl;
+68         cout << endl;
+69         \hyperlink{learn_8cpp_aca71cd1853cff48e90f3f1ab3c6f8b67}{pinta\_mensaje}();
+70         \textcolor{keywordflow}{return} 1;
+71     \}
+72     
+73     ContadorBigramas frecuencias(valid);
+74     ContadorBigramas frecuencias\_aux(valid);
+75     
+76     \textcolor{keywordflow}{if} ( strcmp(argv[1], \textcolor{stringliteral}{"-a"}) == 0 ) \{
+77         \hyperlink{classIdioma}{Idioma} init;
+78         status = init.\hyperlink{classIdioma_ab012e232b14198714f83372f43bf1eae}{cargarDeFichero}(fichero\_salida.c\_str());
+79         frecuencias.fromIdioma(init);
+80         \textcolor{keywordflow}{if} (status) cout << \textcolor{stringliteral}{"Fichero "} << fichero\_salida << \textcolor{stringliteral}{" cargado correctamente"} << endl << endl;
+81     \}
+82     
+83     \textcolor{keywordflow}{if} ( !status ) \{
+84         cerr << \textcolor{stringliteral}{"Error abriendo fichero "} << fichero\_salida << endl;
+85         \textcolor{keywordflow}{return} 1;
+86     \}
+87     
+88     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = start\_ficheros; i < argc && status; i++ ) \{
+89         status = frecuencias\_aux.calcularFrecuenciasBigramas(argv[i]);
+90         frecuencias += frecuencias\_aux;
+91         \textcolor{keywordflow}{if} (status) cout << \textcolor{stringliteral}{"Fichero "} << argv[i] << \textcolor{stringliteral}{" añadido correctamente"} << endl;
+92     \}
+93     
+94     \textcolor{keywordflow}{if} ( !status )
+95         \textcolor{keywordflow}{return} 1;
+96     
+97     
+98     
+99     \hyperlink{classIdioma}{Idioma} convertido = frecuencias.toIdioma();
+100     convertido.\hyperlink{classIdioma_ade18af885e0762821718876f7de496df}{setIdioma}(nombre\_idioma);
+101     convertido.\hyperlink{classIdioma_aa6de3b18f24c765ca94f2e84a6498d66}{ordenar}();
+102     status = convertido.\hyperlink{classIdioma_af49108ec99fd517ed7252158859c1b96}{salvarAFichero}(fichero\_salida.c\_str());
+103     
+104     \textcolor{keywordflow}{if} ( !status )
+105         \textcolor{keywordflow}{return} 1;
+106     \textcolor{keywordflow}{else}
+107         cout << endl << \textcolor{stringliteral}{"Proceso realizado satisfactoriamente :)\(\backslash\)nCompruebe su fichero "} << fichero\_salida 
+      << endl;
+108     
+109     \textcolor{keywordflow}{return} 0;
+110 \}
+\end{DoxyCode}
+Gráfico de llamadas para esta función\+:
+% FIG 1

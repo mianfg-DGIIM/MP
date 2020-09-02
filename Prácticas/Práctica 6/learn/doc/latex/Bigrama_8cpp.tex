@@ -1,0 +1,143 @@
+\hypertarget{Bigrama_8cpp}{}\section{Referencia del Archivo src/\+Bigrama.cpp}
+\label{Bigrama_8cpp}\index{src/\+Bigrama.\+cpp@{src/\+Bigrama.\+cpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Bigrama.\+h\char`\"{}}\newline
+Dependencia gráfica adjunta para Bigrama.\+cpp\+:
+% FIG 0
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{Bigrama_8cpp_aaca86fc31096b2e677855f137771ee97}{es\+Bigrama\+Menor} (const char $\ast$a, const char $\ast$b)
+\begin{DoxyCompactList}\small\item\em Determina si el primer bigrama es menor alfabéticamente que el segundo. \end{DoxyCompactList}\item 
+void \hyperlink{Bigrama_8cpp_aa1d51a371ee535a37b86d935813bc30c}{ordena\+Asc\+Frec} (\hyperlink{classBigrama}{Bigrama} $\ast$v, int n)
+\begin{DoxyCompactList}\small\item\em Ordena un vector de bigramas de forma ascendente por frecuencias. \end{DoxyCompactList}\item 
+void \hyperlink{Bigrama_8cpp_a053c03083c19b0549f9ccd8d9b1b9175}{ordena\+Desc\+Frec} (\hyperlink{classBigrama}{Bigrama} $\ast$v, int n)
+\begin{DoxyCompactList}\small\item\em Ordena un vector de bigramas de forma descendente por frecuencias. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Bigrama_8cpp_ae00d5ea6f903aa07351be56c77c2b3c6}\label{Bigrama_8cpp_ae00d5ea6f903aa07351be56c77c2b3c6}} 
+void {\bfseries ordena\+Asc\+Bigr} (\hyperlink{classBigrama}{Bigrama} $\ast$v, int n)
+\item 
+\mbox{\Hypertarget{Bigrama_8cpp_acf4fe1af10c151a77077bb9befa25d1d}\label{Bigrama_8cpp_acf4fe1af10c151a77077bb9befa25d1d}} 
+void {\bfseries imprime\+Bigramas} (const \hyperlink{classBigrama}{Bigrama} $\ast$v, int n)
+\item 
+\mbox{\Hypertarget{Bigrama_8cpp_a0eca399ec15ba6e05e535b3128bda5f0}\label{Bigrama_8cpp_a0eca399ec15ba6e05e535b3128bda5f0}} 
+void {\bfseries copiar\+Bigrama} (const \hyperlink{classBigrama}{Bigrama} $\ast$original, \hyperlink{classBigrama}{Bigrama} $\ast$\&v, int n)
+\item 
+\mbox{\Hypertarget{Bigrama_8cpp_a84a325b2c1dac50c48bd1c177cd9db3b}\label{Bigrama_8cpp_a84a325b2c1dac50c48bd1c177cd9db3b}} 
+void {\bfseries suma\+Bigramas} (const \hyperlink{classBigrama}{Bigrama} $\ast$v1, int nv1, const \hyperlink{classBigrama}{Bigrama} $\ast$v2, int nv2, \hyperlink{classBigrama}{Bigrama} $\ast$\&res, int \&nres)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\begin{DoxyAuthor}{Autor}
+Miguel Ángel Fernández Gutiérrez \href{mailto:mianfg@correo.ugr.es}{\tt mianfg@correo.\+ugr.\+es} 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\mbox{\Hypertarget{Bigrama_8cpp_aaca86fc31096b2e677855f137771ee97}\label{Bigrama_8cpp_aaca86fc31096b2e677855f137771ee97}} 
+\index{Bigrama.\+cpp@{Bigrama.\+cpp}!es\+Bigrama\+Menor@{es\+Bigrama\+Menor}}
+\index{es\+Bigrama\+Menor@{es\+Bigrama\+Menor}!Bigrama.\+cpp@{Bigrama.\+cpp}}
+\subsubsection{\texorpdfstring{es\+Bigrama\+Menor()}{esBigramaMenor()}}
+{\footnotesize\ttfamily bool es\+Bigrama\+Menor (\begin{DoxyParamCaption}\item[{const char $\ast$}]{a,  }\item[{const char $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Determina si el primer bigrama es menor alfabéticamente que el segundo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & El primer bigrama \\
+\hline
+{\em b} & El segundo bigrama \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+si el bigrama a es mayor que b 
+\end{DoxyReturn}
+
+
+Definición en la línea 36 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+36                                                     \{
+37     \textcolor{keywordtype}{bool} esMenor = \textcolor{keyword}{false};
+38     \textcolor{keywordflow}{if} ( a[0] < b[0] )
+39         esMenor = \textcolor{keyword}{true};
+40     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( a[0] == b[0] )
+41         \textcolor{keywordflow}{if} ( a[1] < b[1] )
+42             esMenor = \textcolor{keyword}{true};
+43     \textcolor{keywordflow}{return} esMenor;
+44 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{Bigrama_8cpp_aa1d51a371ee535a37b86d935813bc30c}\label{Bigrama_8cpp_aa1d51a371ee535a37b86d935813bc30c}} 
+\index{Bigrama.\+cpp@{Bigrama.\+cpp}!ordena\+Asc\+Frec@{ordena\+Asc\+Frec}}
+\index{ordena\+Asc\+Frec@{ordena\+Asc\+Frec}!Bigrama.\+cpp@{Bigrama.\+cpp}}
+\subsubsection{\texorpdfstring{ordena\+Asc\+Frec()}{ordenaAscFrec()}}
+{\footnotesize\ttfamily void ordena\+Asc\+Frec (\begin{DoxyParamCaption}\item[{\hyperlink{classBigrama}{Bigrama} $\ast$}]{v,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Ordena un vector de bigramas de forma ascendente por frecuencias. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & El vector de bigramas \\
+\hline
+{\em n} & Tamaño de {\itshape v} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 46 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+46                                       \{
+47     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < n; i++ ) \{
+48         \textcolor{keywordtype}{int} loc = i;
+49         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} j = i+1; j < n; j++ )
+50             \textcolor{keywordflow}{if} ( v[j].getFrecuencia() < v[loc].getFrecuencia() )
+51                 loc = j;
+52         \hyperlink{classBigrama}{Bigrama} aux = v[i];
+53         v[i] = v[loc];
+54         v[loc] = aux;
+55     \}
+56 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{Bigrama_8cpp_a053c03083c19b0549f9ccd8d9b1b9175}\label{Bigrama_8cpp_a053c03083c19b0549f9ccd8d9b1b9175}} 
+\index{Bigrama.\+cpp@{Bigrama.\+cpp}!ordena\+Desc\+Frec@{ordena\+Desc\+Frec}}
+\index{ordena\+Desc\+Frec@{ordena\+Desc\+Frec}!Bigrama.\+cpp@{Bigrama.\+cpp}}
+\subsubsection{\texorpdfstring{ordena\+Desc\+Frec()}{ordenaDescFrec()}}
+{\footnotesize\ttfamily void ordena\+Desc\+Frec (\begin{DoxyParamCaption}\item[{\hyperlink{classBigrama}{Bigrama} $\ast$}]{v,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Ordena un vector de bigramas de forma descendente por frecuencias. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & El vector de bigramas \\
+\hline
+{\em n} & Tamaño de {\itshape v} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 58 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+58                                        \{
+59     \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} i = 0; i < n; i++ ) \{
+60         \textcolor{keywordtype}{int} loc = i;
+61         \textcolor{keywordflow}{for} ( \textcolor{keywordtype}{int} j = i+1; j < n; j++ )
+62             \textcolor{keywordflow}{if} ( v[j].getFrecuencia() > v[loc].getFrecuencia() )
+63                 loc = j;
+64         \hyperlink{classBigrama}{Bigrama} aux = v[i];
+65         v[i] = v[loc];
+66         v[loc] = aux;
+67     \}
+68 \}
+\end{DoxyCode}

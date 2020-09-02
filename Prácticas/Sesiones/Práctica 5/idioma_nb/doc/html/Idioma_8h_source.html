@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Fusión de idiomas: Fichero Fuente include/Idioma.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Fusión de idiomas
+   &#160;<span id="projectnumber">0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Idioma.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Idioma_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef IDIOMA_H</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define IDIOMA_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Bigrama_8h.html">Bigrama.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>Idioma {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Idioma();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Idioma(<span class="keywordtype">int</span> nbg);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> reservarMemoria(<span class="keywordtype">int</span> n);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> ampliarMemoria(<span class="keywordtype">int</span> n);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> liberarMemoria();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::string getIdioma() <span class="keyword">const</span>;  </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setIdioma(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classBigrama.html">Bigrama</a> getPosicion(<span class="keywordtype">int</span> p) <span class="keyword">const</span>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> setPosicion(<span class="keywordtype">int</span> p, <span class="keyword">const</span> <a class="code" href="classBigrama.html">Bigrama</a> &amp; bg);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">int</span> getSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _nBigramas; };</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> findBigrama(<span class="keyword">const</span> std::string bg) <span class="keyword">const</span>;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> addBigrama(<span class="keyword">const</span> <a class="code" href="classBigrama.html">Bigrama</a> &amp; bg);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">bool</span> cargarDeFichero(<span class="keyword">const</span> <span class="keywordtype">char</span> *fichero);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;     </div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> addDeFichero(<span class="keyword">const</span> <span class="keywordtype">char</span> *fichero);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;     </div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::string _idioma;    </div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classBigrama.html">Bigrama</a>* _conjunto;     </div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">int</span> _nBigramas;         </div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="Bigrama_8h_html"><div class="ttname"><a href="Bigrama_8h.html">Bigrama.h</a></div></div>
+<div class="ttc" id="classBigrama_html"><div class="ttname"><a href="classBigrama.html">Bigrama</a></div><div class="ttdoc">Gestión individual de bigramas: pares de letras consecutivas de un texto y su frecuencia asociada den...</div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8h_source.html#l00013">Bigrama.h:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

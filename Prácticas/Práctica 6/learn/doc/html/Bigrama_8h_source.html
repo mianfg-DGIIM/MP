@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>learn: Fichero Fuente include/Bigrama.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">learn
+   &#160;<span id="projectnumber">2018.06.08</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bigrama.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Bigrama_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef BIGRAMA_H</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define BIGRAMA_H</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classBigrama.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBigrama.html">Bigrama</a> {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classBigrama.html#ab23e397dac61913482c119af30fe37a2">Bigrama</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classBigrama.html#adb616b62beeaa4fb9303cd647ea3fba3">getBigrama</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classBigrama.html#a5a7f1ec845ac5971c8d788c12171a9c9">getFrecuencia</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBigrama.html#ad9f512b7f00068f100f2fdfb5de32746">setBigrama</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> cadena[]);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBigrama.html#a63dd808514f1eaf233f49cbbe3c2af82">setFrecuencia</a>(<span class="keywordtype">int</span> frec);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">char</span> _bigrama[3]; </div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> _frecuencia;  </div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Bigrama_8h.html#aa1d51a371ee535a37b86d935813bc30c">ordenaAscFrec</a>(<a class="code" href="classBigrama.html">Bigrama</a> *v, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Bigrama_8h.html#a053c03083c19b0549f9ccd8d9b1b9175">ordenaDescFrec</a>(<a class="code" href="classBigrama.html">Bigrama</a> *v, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Bigrama_8h.html#aaca86fc31096b2e677855f137771ee97">esBigramaMenor</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>* a, <span class="keyword">const</span> <span class="keywordtype">char</span>* b );</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">char</span> toMinuscula( <span class="keywordtype">char</span> caracter );</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> ordenaAscBigr(<a class="code" href="classBigrama.html">Bigrama</a> *v, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> imprimeBigramas(<span class="keyword">const</span> <a class="code" href="classBigrama.html">Bigrama</a> *v, <span class="keywordtype">int</span> n);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> sumaBigramas(<span class="keyword">const</span> <a class="code" href="classBigrama.html">Bigrama</a> *v1, <span class="keywordtype">int</span> nv1, <span class="keyword">const</span> <a class="code" href="classBigrama.html">Bigrama</a> *v2, <span class="keywordtype">int</span> nv2, <a class="code" href="classBigrama.html">Bigrama</a> *&amp;res, <span class="keywordtype">int</span> &amp; nres);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BIGRAMA_H */</span><span class="preprocessor"></span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="ttc" id="classBigrama_html_a5a7f1ec845ac5971c8d788c12171a9c9"><div class="ttname"><a href="classBigrama.html#a5a7f1ec845ac5971c8d788c12171a9c9">Bigrama::getFrecuencia</a></div><div class="ttdeci">int getFrecuencia() const</div><div class="ttdoc">Devuelve la frecuencia almacenada. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00021">Bigrama.cpp:21</a></div></div>
+<div class="ttc" id="classBigrama_html_ab23e397dac61913482c119af30fe37a2"><div class="ttname"><a href="classBigrama.html#ab23e397dac61913482c119af30fe37a2">Bigrama::Bigrama</a></div><div class="ttdeci">Bigrama()</div><div class="ttdoc">Constructor base. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00012">Bigrama.cpp:12</a></div></div>
+<div class="ttc" id="Bigrama_8h_html_aaca86fc31096b2e677855f137771ee97"><div class="ttname"><a href="Bigrama_8h.html#aaca86fc31096b2e677855f137771ee97">esBigramaMenor</a></div><div class="ttdeci">bool esBigramaMenor(const char *a, const char *b)</div><div class="ttdoc">Determina si el primer bigrama es menor alfabéticamente que el segundo. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00036">Bigrama.cpp:36</a></div></div>
+<div class="ttc" id="Bigrama_8h_html_a053c03083c19b0549f9ccd8d9b1b9175"><div class="ttname"><a href="Bigrama_8h.html#a053c03083c19b0549f9ccd8d9b1b9175">ordenaDescFrec</a></div><div class="ttdeci">void ordenaDescFrec(Bigrama *v, int n)</div><div class="ttdoc">Ordena un vector de bigramas de forma descendente por frecuencias. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00058">Bigrama.cpp:58</a></div></div>
+<div class="ttc" id="classBigrama_html_ad9f512b7f00068f100f2fdfb5de32746"><div class="ttname"><a href="classBigrama.html#ad9f512b7f00068f100f2fdfb5de32746">Bigrama::setBigrama</a></div><div class="ttdeci">void setBigrama(const char cadena[])</div><div class="ttdoc">Actualiza el bigrama, siempre que sea de la longitud adecuada, en otro caso, no se actualiza...</div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00025">Bigrama.cpp:25</a></div></div>
+<div class="ttc" id="Bigrama_8h_html_aa1d51a371ee535a37b86d935813bc30c"><div class="ttname"><a href="Bigrama_8h.html#aa1d51a371ee535a37b86d935813bc30c">ordenaAscFrec</a></div><div class="ttdeci">void ordenaAscFrec(Bigrama *v, int n)</div><div class="ttdoc">Ordena un vector de bigramas de forma ascendente por frecuencias. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00046">Bigrama.cpp:46</a></div></div>
+<div class="ttc" id="classBigrama_html"><div class="ttname"><a href="classBigrama.html">Bigrama</a></div><div class="ttdoc">Gestión individual de bigramas: pares de letras consecutivas de un texto y su frecuencia asociada den...</div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8h_source.html#l00013">Bigrama.h:13</a></div></div>
+<div class="ttc" id="classBigrama_html_adb616b62beeaa4fb9303cd647ea3fba3"><div class="ttname"><a href="classBigrama.html#adb616b62beeaa4fb9303cd647ea3fba3">Bigrama::getBigrama</a></div><div class="ttdeci">const char * getBigrama() const</div><div class="ttdoc">Devuelve el bigrama almacenado. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00017">Bigrama.cpp:17</a></div></div>
+<div class="ttc" id="classBigrama_html_a63dd808514f1eaf233f49cbbe3c2af82"><div class="ttname"><a href="classBigrama.html#a63dd808514f1eaf233f49cbbe3c2af82">Bigrama::setFrecuencia</a></div><div class="ttdeci">void setFrecuencia(int frec)</div><div class="ttdoc">Actualiza la frecuencia almacenada. </div><div class="ttdef"><b>Definition:</b> <a href="Bigrama_8cpp_source.html#l00032">Bigrama.cpp:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,140 @@
+\hypertarget{classBigrama}{}\section{Referencia de la Clase Bigrama}
+\label{classBigrama}\index{Bigrama@{Bigrama}}
+
+
+Gestión individual de bigramas\+: pares de letras consecutivas de un texto y su frecuencia asociada dentro del texto.  
+
+
+
+
+{\ttfamily \#include $<$Bigrama.\+h$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBigrama_ab23e397dac61913482c119af30fe37a2}\label{classBigrama_ab23e397dac61913482c119af30fe37a2}} 
+\hyperlink{classBigrama_ab23e397dac61913482c119af30fe37a2}{Bigrama} ()
+\begin{DoxyCompactList}\small\item\em Constructor base. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classBigrama_adb616b62beeaa4fb9303cd647ea3fba3}{get\+Bigrama} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el bigrama almacenado. \end{DoxyCompactList}\item 
+int \hyperlink{classBigrama_a5a7f1ec845ac5971c8d788c12171a9c9}{get\+Frecuencia} () const
+\begin{DoxyCompactList}\small\item\em Devuelve la frecuencia almacenada. \end{DoxyCompactList}\item 
+void \hyperlink{classBigrama_ad9f512b7f00068f100f2fdfb5de32746}{set\+Bigrama} (const char cadena\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Actualiza el bigrama, siempre que sea de la longitud adecuada, en otro caso, no se actualiza, para evitar desbordamientos del vector. \end{DoxyCompactList}\item 
+void \hyperlink{classBigrama_a63dd808514f1eaf233f49cbbe3c2af82}{set\+Frecuencia} (int frec)
+\begin{DoxyCompactList}\small\item\em Actualiza la frecuencia almacenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Gestión individual de bigramas\+: pares de letras consecutivas de un texto y su frecuencia asociada dentro del texto. 
+
+Definición en la línea 13 del archivo Bigrama.\+h.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classBigrama_adb616b62beeaa4fb9303cd647ea3fba3}\label{classBigrama_adb616b62beeaa4fb9303cd647ea3fba3}} 
+\index{Bigrama@{Bigrama}!get\+Bigrama@{get\+Bigrama}}
+\index{get\+Bigrama@{get\+Bigrama}!Bigrama@{Bigrama}}
+\subsubsection{\texorpdfstring{get\+Bigrama()}{getBigrama()}}
+{\footnotesize\ttfamily const char $\ast$ Bigrama\+::get\+Bigrama (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el bigrama almacenado. 
+
+\begin{DoxyReturn}{Devuelve}
+el bigrama 
+\end{DoxyReturn}
+
+
+Definición en la línea 17 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+17                                       \{
+18     \textcolor{keywordflow}{return} \_bigrama;
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBigrama_a5a7f1ec845ac5971c8d788c12171a9c9}\label{classBigrama_a5a7f1ec845ac5971c8d788c12171a9c9}} 
+\index{Bigrama@{Bigrama}!get\+Frecuencia@{get\+Frecuencia}}
+\index{get\+Frecuencia@{get\+Frecuencia}!Bigrama@{Bigrama}}
+\subsubsection{\texorpdfstring{get\+Frecuencia()}{getFrecuencia()}}
+{\footnotesize\ttfamily int Bigrama\+::get\+Frecuencia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve la frecuencia almacenada. 
+
+\begin{DoxyReturn}{Devuelve}
+la frecuencia 
+\end{DoxyReturn}
+
+
+Definición en la línea 21 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+21                                  \{
+22     \textcolor{keywordflow}{return} \_frecuencia;
+23 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBigrama_ad9f512b7f00068f100f2fdfb5de32746}\label{classBigrama_ad9f512b7f00068f100f2fdfb5de32746}} 
+\index{Bigrama@{Bigrama}!set\+Bigrama@{set\+Bigrama}}
+\index{set\+Bigrama@{set\+Bigrama}!Bigrama@{Bigrama}}
+\subsubsection{\texorpdfstring{set\+Bigrama()}{setBigrama()}}
+{\footnotesize\ttfamily void Bigrama\+::set\+Bigrama (\begin{DoxyParamCaption}\item[{const char}]{cadena\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Actualiza el bigrama, siempre que sea de la longitud adecuada, en otro caso, no se actualiza, para evitar desbordamientos del vector. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cadena} & El nuevo valor del bigrama \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 25 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+25                                             \{
+26     \textcolor{keywordflow}{if} (strlen(cadena) == 2) \{
+27         strcpy(\_bigrama, cadena);
+28         \_bigrama[2] = \textcolor{charliteral}{'\(\backslash\)0'};
+29     \}
+30 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBigrama_a63dd808514f1eaf233f49cbbe3c2af82}\label{classBigrama_a63dd808514f1eaf233f49cbbe3c2af82}} 
+\index{Bigrama@{Bigrama}!set\+Frecuencia@{set\+Frecuencia}}
+\index{set\+Frecuencia@{set\+Frecuencia}!Bigrama@{Bigrama}}
+\subsubsection{\texorpdfstring{set\+Frecuencia()}{setFrecuencia()}}
+{\footnotesize\ttfamily void Bigrama\+::set\+Frecuencia (\begin{DoxyParamCaption}\item[{int}]{frec }\end{DoxyParamCaption})}
+
+
+
+Actualiza la frecuencia almacenada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em frec} & La nueva frecuencia \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 32 del archivo Bigrama.\+cpp.
+
+
+\begin{DoxyCode}
+32                                     \{
+33     \_frecuencia = frec;
+34 \}
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Bigrama_8h}{Bigrama.\+h}\item 
+src/\hyperlink{Bigrama_8cpp}{Bigrama.\+cpp}\end{DoxyCompactItemize}

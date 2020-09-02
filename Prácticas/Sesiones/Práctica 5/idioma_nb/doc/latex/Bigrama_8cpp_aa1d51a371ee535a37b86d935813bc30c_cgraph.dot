@@ -1,0 +1,17 @@
+digraph "ordenaAscFrec"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ordenaAscFrec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Bigrama::setBigrama",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#ad9f512b7f00068f100f2fdfb5de32746",tooltip="Actualiza el bigrama, siempre que sea de la longitud adecuada, en otro caso, no se actualiza..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="esBigramaMenor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Bigrama_8cpp.html#aaca86fc31096b2e677855f137771ee97",tooltip="Determina si el primer bigrama es menor alfabéticamente que el segundo. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Bigrama::getBigrama",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#a66ca46066bbcc28d0e428f779f7da941",tooltip="Devuelve el bigrama almacenado. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Bigrama::getFrecuencia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#a61bb256efe3cf173e91cbba124e27f48",tooltip="Devuelve la frecuencia almacenada. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Bigrama::setFrecuencia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBigrama.html#a63dd808514f1eaf233f49cbbe3c2af82",tooltip="Actualiza la frecuencia almacenada. "];
+}

@@ -1,0 +1,179 @@
+\hypertarget{intervalo_8cpp}{}\section{Referencia del Archivo src/intervalo.cpp}
+\label{intervalo_8cpp}\index{src/intervalo.\+cpp@{src/intervalo.\+cpp}}
+
+
+Implementación de la clase {\ttfamily \hyperlink{classIntervalo}{Intervalo}}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}intervalo.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para intervalo.\+cpp\+:
+% FIG 0
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIntervalo}{Intervalo} \hyperlink{intervalo_8cpp_a41f5fd8dad22e4ff922440cba788c5f1}{interseccion} (const \hyperlink{classIntervalo}{Intervalo} \&i1, const \hyperlink{classIntervalo}{Intervalo} \&i2)
+\item 
+void \hyperlink{intervalo_8cpp_ae93092259c95b463d176a768b9884802}{escribir} (const \hyperlink{classIntervalo}{Intervalo} \&i)
+\begin{DoxyCompactList}\small\item\em Imprime los valores de un intervalo de forma visual según lo indicado en el guión. \end{DoxyCompactList}\item 
+void \hyperlink{intervalo_8cpp_a81ca561257a3eea794e139a64fdd6593}{leer} (\hyperlink{classIntervalo}{Intervalo} \&i)
+\begin{DoxyCompactList}\small\item\em Lee los valores del intervalo según el formato indicado en el guión. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Implementación de la clase {\ttfamily \hyperlink{classIntervalo}{Intervalo}}. 
+
+\begin{DoxyAuthor}{Autor}
+Miguel Ángel Fernández Gutiérrez -\/ 1º D\+G\+I\+IM 2017/2018, MP Grupo A 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\index{intervalo.\+cpp@{intervalo.\+cpp}!escribir@{escribir}}
+\index{escribir@{escribir}!intervalo.\+cpp@{intervalo.\+cpp}}
+\subsubsection[{\texorpdfstring{escribir(const Intervalo \&i)}{escribir(const Intervalo &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void escribir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Intervalo} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{intervalo_8cpp_ae93092259c95b463d176a768b9884802}{}\label{intervalo_8cpp_ae93092259c95b463d176a768b9884802}
+
+
+Imprime los valores de un intervalo de forma visual según lo indicado en el guión. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El intervalo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 104 del archivo intervalo.\+cpp.
+
+
+\begin{DoxyCode}
+104                                   \{
+105     \textcolor{keywordflow}{if} ( i.\hyperlink{classIntervalo_a6737cfbda201a3a6e11a716d2568d322}{esCerradoInf}() )
+106         cout << \textcolor{stringliteral}{"["};
+107     \textcolor{keywordflow}{else}
+108         cout << \textcolor{stringliteral}{"("};
+109     cout << i.\hyperlink{classIntervalo_af8170b68c6d6a63192db6685b90f782f}{getCotaInf}() << \textcolor{stringliteral}{","} << i.\hyperlink{classIntervalo_a7f8ff94ce16f90a81a3c55f36044893b}{getCotaSup}();
+110     \textcolor{keywordflow}{if} ( i.\hyperlink{classIntervalo_ad0c5573ee88ffbfda8f78454b78d91a6}{esCerradoSup}() )
+111         cout << \textcolor{stringliteral}{"]"};
+112     \textcolor{keywordflow}{else}
+113         cout << \textcolor{stringliteral}{")"};
+114 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+% FIG 1
+
+
+\index{intervalo.\+cpp@{intervalo.\+cpp}!interseccion@{interseccion}}
+\index{interseccion@{interseccion}!intervalo.\+cpp@{intervalo.\+cpp}}
+\subsubsection[{\texorpdfstring{interseccion(const Intervalo \&i1, const Intervalo \&i2)}{interseccion(const Intervalo &i1, const Intervalo &i2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Intervalo} interseccion (
+\begin{DoxyParamCaption}
+\item[{const {\bf Intervalo} \&}]{i1, }
+\item[{const {\bf Intervalo} \&}]{i2}
+\end{DoxyParamCaption}
+)}\hypertarget{intervalo_8cpp_a41f5fd8dad22e4ff922440cba788c5f1}{}\label{intervalo_8cpp_a41f5fd8dad22e4ff922440cba788c5f1}
+
+\begin{DoxyParams}{Parámetros}
+{\em i1} & primer intervalo de entrada \\
+\hline
+{\em i2} & segundo intervalo de entrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve el intervalo resultante de realizar la intersección entre los dos intervalos de entrada 
+\end{DoxyReturn}
+
+
+Definición en la línea 70 del archivo intervalo.\+cpp.
+
+
+\begin{DoxyCode}
+70                                                                    \{
+71     \hyperlink{classIntervalo}{Intervalo} \hyperlink{intervalo_8cpp_a41f5fd8dad22e4ff922440cba788c5f1}{interseccion};
+72     \textcolor{keywordflow}{if} ( i1.cotaInf == i2.cotaInf ) \{
+73         interseccion.cotaInf = i1.cotaInf;
+74         interseccion.cerradoInf = i1.cerradoInf && i2.cerradoInf;
+75     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( i1.cotaInf > i2.cotaInf ) \{
+76         interseccion.cotaInf = i1.cotaInf;
+77         interseccion.cerradoInf = i1.cerradoInf;
+78     \} \textcolor{keywordflow}{else} \{
+79         interseccion.cotaInf = i2.cotaInf;
+80         interseccion.cerradoInf = i2.cerradoInf;
+81     \}
+82     
+83     \textcolor{keywordflow}{if} ( i1.cotaSup == i2.cotaSup ) \{
+84         interseccion.cotaSup = i1.cotaSup;
+85         interseccion.cerradoSup = i1.cerradoSup && i2.cerradoSup;
+86     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( i1.cotaSup < i2.cotaSup ) \{
+87         interseccion.cotaSup = i1.cotaSup;
+88         interseccion.cerradoSup = i1.cerradoSup;
+89     \} \textcolor{keywordflow}{else} \{
+90         interseccion.cotaSup = i2.cotaSup;
+91         interseccion.cerradoSup = i2.cerradoSup;
+92     \}
+93 
+94     \textcolor{keywordflow}{if} ( !interseccion.validar(interseccion.cotaInf, interseccion.cotaSup, interseccion.cerradoInf, 
+      interseccion.cerradoSup) ) \{
+95         interseccion.cotaSup = 0;
+96         interseccion.cotaInf = 0;
+97         interseccion.cerradoSup = \textcolor{keyword}{false};
+98         interseccion.cerradoInf = \textcolor{keyword}{false};
+99     \}
+100 
+101     \textcolor{keywordflow}{return} \hyperlink{intervalo_8cpp_a41f5fd8dad22e4ff922440cba788c5f1}{interseccion};
+102 \}
+\end{DoxyCode}
+\index{intervalo.\+cpp@{intervalo.\+cpp}!leer@{leer}}
+\index{leer@{leer}!intervalo.\+cpp@{intervalo.\+cpp}}
+\subsubsection[{\texorpdfstring{leer(\+Intervalo \&i)}{leer(Intervalo &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void leer (
+\begin{DoxyParamCaption}
+\item[{{\bf Intervalo} \&}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{intervalo_8cpp_a81ca561257a3eea794e139a64fdd6593}{}\label{intervalo_8cpp_a81ca561257a3eea794e139a64fdd6593}
+
+
+Lee los valores del intervalo según el formato indicado en el guión. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & El intervalo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 116 del archivo intervalo.\+cpp.
+
+
+\begin{DoxyCode}
+116                         \{
+117     \textcolor{keywordtype}{char} lectura;
+118     \textcolor{keywordtype}{double} cotaInf, cotaSup;
+119     \textcolor{keywordtype}{bool} cerradoInf, cerradoSup;
+120     cin >> lectura;
+121     \textcolor{keywordflow}{if} ( lectura == \textcolor{charliteral}{'['} )
+122         cerradoInf = \textcolor{keyword}{true};
+123     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( lectura == \textcolor{charliteral}{'('} )
+124         cerradoInf = \textcolor{keyword}{false};
+125     \textcolor{keywordflow}{else} \{
+126         cout << \textcolor{stringliteral}{"Fallo al leer las cotas. Inserte [, (, ) ó ]"} << endl;
+127         assert(\textcolor{keyword}{false});
+128     \}
+129     cin >> cotaInf >> lectura >> cotaSup >> lectura;
+130     \textcolor{keywordflow}{if} ( lectura == \textcolor{charliteral}{']'} )
+131         cerradoSup = \textcolor{keyword}{true};
+132     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( lectura == \textcolor{charliteral}{')'} )
+133         cerradoSup = \textcolor{keyword}{false};
+134     \textcolor{keywordflow}{else} \{
+135         cout << \textcolor{stringliteral}{"Fallo al leer las cotas. Inserte [, (, ) ó ]"} << endl;
+136         assert(\textcolor{keyword}{false});
+137     \}
+138     \hyperlink{classIntervalo}{Intervalo} i2(cotaInf, cotaSup, cerradoInf, cerradoSup);
+139     i = i2;
+140 \}
+\end{DoxyCode}
