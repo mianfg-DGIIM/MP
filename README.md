@@ -1,6 +1,6 @@
-[⬅ Más asignaturas del DGIIM](https://github.com/mianfg/DGIIM)
+[⬅ Más asignaturas del DGIIM](https://github.com/mianfg-DGIIM)
 
-![Repo image](https://repository-images.githubusercontent.com/292335308/d9299d00-ed49-11ea-8aa3-eb539b20e9a8)
+![Repo image](https://repository-images.githubusercontent.com/292335308/5bdd1c60-32f4-4353-adcc-55356bcc161c)
 
 # `MP` Metodología de la Programación
 
